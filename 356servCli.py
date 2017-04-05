@@ -2,6 +2,16 @@
 # by Pat McGrath
 import sys,socket
 
+#master connection list
+topology = [[0,1,3,7],
+            [1,0,1,99],
+            [3,1,0,2],
+            [7,99,2,0]]
+
+def bellman(main[x][z],com[c][v]):
+    
+
+
 #create master socket
 mainSock = socket.socket()
 
@@ -25,6 +35,8 @@ if (socketConnect("localhost",55554)):
 
 #begin main loop
 while True:
+
+    rouTable = topology[0] # to make this router 0
     ##
     ## code for listening should go here
     ##
